@@ -66,7 +66,7 @@ class Usuario(Resource):
         """Deletar um usuário pelo ID"""
         for usuario in usuarios:
             if usuario["id"] == id:
-                usuario.remove(usuario)
+                usuarios.remove(usuario)
                 return {"message": 'Usuário deletado com sucesso'}, 200
         return {"message": "Usuário não encontrado"}, 404
 
